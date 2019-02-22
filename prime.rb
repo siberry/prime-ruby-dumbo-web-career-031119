@@ -1,8 +1,8 @@
 def prime?(num)
-    factors = (2...num.abs).to_a
+    poss_factors = (2...num.abs).to_a
     a_factor = []
-    factors.each do |factor|
-      a_factor.push(num.abs % factor == 0)
+    poss_factors.each do |factor|
+      a_factor.push(num % factor == 0)
     end
     t_or_f = a_factor.include?(true) || num.abs == 1 || num == 0
     !t_or_f
